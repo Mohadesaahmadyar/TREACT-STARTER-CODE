@@ -51,7 +51,7 @@ NAVBAR ↓
 
 nav {
     display: flex;
-    padding-top: 32px;
+    padding-top: 32px; 
 }
 
 .nav__row {
