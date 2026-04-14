@@ -565,12 +565,14 @@ VALUES ↓
 #values .row {
     display: flex;
     justify-content: space-between;
-    align-items: center;  
+    align-items: center; 
+        gap: 64px; 
 }
 
 .value__content{
-    flex-direction: column;
     width: 50%;
+    display: flex;
+    flex-direction: column;
     text-align: left;
 }
 .values__title{
@@ -592,6 +594,7 @@ VALUES ↓
     font-size: 18px;
     line-height: 1.625;
     color: #7c8ba1;
+    margin-bottom: 32px;
 }
 .values__item--icon{
     width: 32px;
@@ -630,14 +633,20 @@ VALUES ↓
     margin-top: 16px;
     transition: background-color 300ms ease, transform 300ms ease;
 }
+.values__item--btn:hover {
+    background-color: #5011cc;
+    transform: translateY(-2px);
+}
 .values__img--container{
     width: 50%;
     
 }
 .values__img{
     width: 100%;
-    display: block;
 }
+.values__img img {
+    width: 100%;
+    display: block; }
 /*
 
 PRICING ↓
