@@ -694,61 +694,88 @@ PRICING ↓
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 32px;
 }
 
-.pricing__title {
-    text-align: center;
-    font-size: 36px;
-    font-weight: 900;
-    line-height: 1.3;
-    color: #1e2125de;
+.section__tage{
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
     margin-bottom: 16px;
+}
+.pricing__title {
+    font-size: 48px;
+    font-weight: 900;
 }
 
 .pricing__description {
-    text-align: center;
     font-size: 18px;
-    line-height: 1.625;
+    line-height: 1.8;
+    font-weight: 500;
     color: #7c8ba1;
+    max-width: 576px;
+    text-align: center;
     margin-bottom: 32px;
 }
 
 .plans {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    margin-top: 32px;
     gap: 32px;
     width: 100%;
+    padding: 0 16px;
+    flex-wrap: nowrap;
 }
 
 .plans__container {
-    position: relative;
-    margin-top: 0.5rem;
-    display: flex;
-    width: 100%;
-    max-width: 24rem;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
-    text-align: center;
+    flex: 1;
+    max-width: 360px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
 }
 
-.personal__plan,
-.plan__btn {
-    color: rgb(247, 250, 252);
+
+.plan__stripe {
+    height: 8px;
+    width: 100%;
+}
+
+.personal__stripe {
     background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
 }
 
-.personal__plan {
-    height: 0.5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin-right: 2rem;
-    padding-top: 0.5rem;
-    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-    color: rgb(26, 32, 44);
-    border-radius: 0.5rem;
+.enterprise__stripe {
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
 }
 
+.plan {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: white;
+    height: 100%;
+}
+.business__plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
+    color: white; 
+}
+.business__plan .plan__name,
+.business__plan .plan__price,
+.business__plan .plan__duration,
+.business__plan .plan__description,
+.business__plan .plan__features,
+.business__plan .plan__features li {
+    color: white;
+}
 
 .pricing__plan--header,
 .enterprise__plan--header,
@@ -756,30 +783,9 @@ PRICING ↓
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
-    padding: 12px 0;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-}
-
-.plan__name {
-    font-size: 20px;
-    font-weight: 600;
-    color: #000;
-    margin: 0;
-}
-
-.plan__price {
-    font-size: 24px;
-    font-weight: 700;
-    color: #000000;
-    margin: 0;
-}
-
-.plan__duration {
-    font-size: 14px;
-    font-weight: 500;
-    color: #7c8ba1;
-    margin: 0;
+    gap: 12px;
+    padding: 32px 24px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
 }
 
 .pricing__plan--features,
@@ -788,56 +794,82 @@ PRICING ↓
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 32px 24px;
     width: 100%;
+}
+
+.plan__name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0;
+}
+
+.plan__price {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0;
+}
+
+.plan__duration {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #a0aec0;
+    margin: 0;
 }
 
 .plan__description {
     font-size: 18px;
-    font-weight: 600;
-    line-height: 1.6;
-    color: #000000;
-    margin: 16px 0;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 24px 0;
 }
 
 .plan__features {
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
     padding: 0;
     margin: 0;
-    color: #7c8ba1;
-    font-size: 14px;
-    padding-bottom: 16px;
-
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #718096;
+    font-size: 18px;
 }
 
 .plan__bottom {
-    padding: 16px 0;
-    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    border-top: 2px solid rgba(0, 0, 0, 0.08);
 }
 
-.plan__btn {
-
-    width: 100%;
-    padding: 12px 0;
+.plan__btn,
+.plan__btn--enterprise,
+.plan__btn--business {
+    min-width: 180px;
+    padding: 14px 32px;
     border-radius: 999px;
     border: none;
     font-size: 16px;
-    font-weight: 600;
-    transition: background-color 300ms ease, transform 300ms ease;
+    font-weight: 700;
     cursor: pointer;
 }
 
-.business__plan {
-    background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
-    width: 100%;
-    height: 100%;
-    border-radius: 0.5rem;
-    color:  rgb(247, 250, 252) ;
-
+.plan__btn {
+    color: white;
+    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
 }
+
+.plan__btn--enterprise {
+    color: white;
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%); 
+}
+.plan__btn--business {
+    color: #1a202c;
+    background: white;
+    
+}
+
 
 /* 
 
@@ -850,6 +882,17 @@ TESTIMONIALS ↓
     display: flex;
 }
 
+.testimonials__content {
+
+}
+.testimonials__img--container {
+    width: 50%;
+}
+
+.testimonials__img {
+    width: 100%;
+    display: block;
+}
 
 /* 
 
@@ -863,7 +906,6 @@ START / CALL TO ACTION ↓
     position: relative;
     overflow: hidden;
 }
-
 
 /* 
 
