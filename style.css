@@ -697,12 +697,13 @@ PRICING ↓
     gap: 32px;
 }
 
-.section__tage{
+.section__tage {
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 1.6px;
     margin-bottom: 16px;
 }
+
 .pricing__title {
     font-size: 48px;
     font-weight: 900;
@@ -735,7 +736,7 @@ PRICING ↓
     border-radius: 8px;
     overflow: hidden;
     background: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -759,6 +760,7 @@ PRICING ↓
     background: white;
     height: 100%;
 }
+
 .business__plan {
     display: flex;
     flex-direction: column;
@@ -766,8 +768,9 @@ PRICING ↓
     width: 100%;
     height: 100%;
     background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
-    color: white; 
+    color: white;
 }
+
 .business__plan .plan__name,
 .business__plan .plan__price,
 .business__plan .plan__duration,
@@ -862,12 +865,13 @@ PRICING ↓
 
 .plan__btn--enterprise {
     color: white;
-    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%); 
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
 }
+
 .plan__btn--business {
     color: #1a202c;
     background: white;
-    
+
 }
 
 
@@ -898,7 +902,7 @@ TESTIMONIALS ↓
 
 .testimonials__img img {
     width: 100%;
-    display: block; 
+    display: block;
 }
 
 
@@ -909,44 +913,52 @@ TESTIMONIALS ↓
     align-items: flex-start;
     gap: 20px;
 }
-.section__tag{
+
+.section__tag {
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 1.6px;
     margin-bottom: 16px;
 }
+
 .testimonials__title {
     font-size: 36px;
     font-weight: 900;
     line-height: 1.3;
     color: #000;
 }
+
 .testimonials__description {
     font-size: 18px;
     line-height: 1.625;
     color: #7c8ba1;
 }
+
 .testimonials__rating {
     display: flex;
     align-items: center;
     gap: 8px;
     /* color: rgb(225, 216, 79); */
 }
+
 .fas.fa-star {
     color: rgba(246, 173, 85, 1);
     font-size: 20px;
 }
+
 .testimonials__title--secondary {
     font-size: 24px;
     font-weight: 700;
     color: #000;
 }
+
 .testimonial__profile--img {
     width: 80px;
     height: 80px;
     border-radius: 9999px;
-    object-fit: cover; 
+    object-fit: cover;
 }
+
 .testimonial__bottom {
     width: 100%;
     display: flex;
@@ -974,8 +986,9 @@ TESTIMONIALS ↓
 
 .testimonials__position {
     font-size: 16px;
-    color: #7c8ba1; 
+    color: #7c8ba1;
 }
+
 .testimonials__button {
     display: flex;
     align-items: center;
@@ -1002,7 +1015,8 @@ TESTIMONIALS ↓
 .divider {
     width: 1px;
     height: 24px;
-    background-color: rgb(226, 232, 240); }
+    background-color: rgb(226, 232, 240);
+}
 
 
 /* 
@@ -1017,6 +1031,7 @@ START / CALL TO ACTION ↓
     position: relative;
     overflow: hidden;
 }
+
 .start__content {
     width: 100%;
     background-color: #6415ff;
@@ -1159,6 +1174,12 @@ footer {
 .footer__socials {
     display: flex;
     gap: 8px;
+
+    .footer__social {
+        width: 32px;
+        height: 32px;
+        border-radius: 999px;
+    }
 }
 
 .footer__social {
@@ -1172,7 +1193,7 @@ footer {
     justify-content: center;
     text-decoration: none;
     font-weight: 700;
-}   
+}
 
 /* 
 
@@ -1188,53 +1209,197 @@ MOBILE RESPONSIVENESS ↓
 }
 
 @media (max-width: 1024px) {
-    .nav__links {
-        display: none;
+
+
+    .header__container {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .btn__menu {
-        display: block;
+    .header__content,
+    .header__img--container {
+        width: 100%;
     }
 
-    header .row {
+    .features__item {
+        width: 50%;
+    }
+
+    .plans {
         flex-direction: column;
         align-items: center;
     }
 
-    footer {
-        padding: 80px 32px;
+    .plans__container {
+        width: 100%;
+        max-width: 400px;
     }
 }
 
 @media (max-width: 768px) {
 
-    #quality .row,
-    #values .row {
-        flex-direction: column-reverse;
+    nav .row {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
     }
 
+    .nav__links {
+        display: none;
+    }
+
+    .nav__logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .nav__logo--text {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    .btn__menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #quality .row,
+    #values .row,
     #steps .row,
     #testimonials .row {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
-    #pricing .row {
-        margin-top: 40px;
+    .quality__description,
+    .quality__img--wrapper,
+    .steps__img,
+    .steps__content,
+    .value__content,
+    .values__img--container,
+    .testimonials__img--container,
+    .testimonials__content {
+        width: 100%;
+    }
+
+    .steps__content,
+    .value__content,
+    .testimonials__content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .step {
+        justify-content: center;
+        text-align: left;
+    }
+
+    .values__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .values__item--btn {
+        align-self: center;
+    }
+
+
+    .start__content {
+        flex-direction: column;
+        text-align: center;
+        padding: 80px 32px;
+    }
+
+    .start__title,
+    .start__buttons {
+        width: 100%;
+        text-align: center;
+    }
+
+    .start__buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer__links {
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+    .footer__column {
+        width: 45%;
+
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
     }
 }
 
+
 @media (max-width: 640px) {
-    .container {
-        padding: 80px 0;
+    nav {
+        padding: 16px 20px 0;
+        width: 100%;
+    }
+
+    .nav__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .nav__logo {
-        margin: 8px 0;
-        padding-bottom: 4px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
     }
 
-    main {
-        margin-bottom: 80px;
-    } 
+    .nav__logo--text {
+        font-size: 18px;
+        white-space: nowrap;
+    }
+
+    .btn__menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn__menu--svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    /* your existing stuff */
+    .features__item {
+        width: 100%;
+    }
+
+    .header__email {
+        flex-direction: column;
+        height: auto;
+        gap: 16px;
+    }
+
+    .header__email--input {
+        position: static;
+        padding: 16px 24px;
+    }
+
+    .header__email--btn {
+        position: static;
+        width: 100%;
+        height: 48px;
+    }
+
+    .footer__column {
+        width: 45%;
+    }
 }
