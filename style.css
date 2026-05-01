@@ -190,9 +190,8 @@ header .row {
 }
 
 .header__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    text-align: left;
     gap: 64px;
 }
 
@@ -200,8 +199,8 @@ header .row {
     width: 40%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
 }
 
 
@@ -268,8 +267,8 @@ header .row {
 
 .header__customers__title,
 .header__customers__img {
-    align-self: center;
-    text-align: center;
+    align-self: flex-start;
+    text-align: left;
 }
 
 .header__customers__img {
@@ -409,7 +408,7 @@ QUALITY WORK ↓
 .quality__description,
 .quality__img--wrapper {
     width: 50%;
-    text-align: center;
+    text-align: left;
 }
 
 .quality__tag {
@@ -468,7 +467,7 @@ QUALITY WORK ↓
     border: none;
     font-size: 16px;
     font-weight: 600;
-    margin-left: 16px;
+    margin-left: 0;
     transition: background-color 300ms ease, transform 300ms ease;
 }
 
@@ -1214,11 +1213,14 @@ MOBILE RESPONSIVENESS ↓
     .header__container {
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
 
     .header__content,
     .header__img--container {
         width: 100%;
+        align-items: center;
+        text-align: center;
     }
 
     .features__item {
@@ -1284,7 +1286,25 @@ MOBILE RESPONSIVENESS ↓
     .testimonials__img--container,
     .testimonials__content {
         width: 100%;
+        align-items: center;
+        text-align: center;
     }
+
+    .features__list {
+        justify-content: center;
+    }
+
+    .features__item--top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .features__item__text {
+        align-items: center;
+        text-align: center;
+    }
+
 
     .steps__content,
     .value__content,
@@ -1294,17 +1314,41 @@ MOBILE RESPONSIVENESS ↓
     }
 
     .step {
-        justify-content: center;
-        text-align: left;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
     }
+
+    .steps__number {
+        min-width: 0;
+    }
+
 
     .values__list {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
+
+    .values__item {
+        text-align: center;
+    }
+
+    .values__item--header {
+        justify-content: center;
+    }
+
 
     .values__item--btn {
         align-self: center;
+    }
+
+    #pricing .row,
+    .pricing__title,
+    .pricing__description {
+        text-align: center;
+        align-items: center;
     }
 
 
@@ -1321,8 +1365,37 @@ MOBILE RESPONSIVENESS ↓
     }
 
     .start__buttons {
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .btn--start,
+    .btn--contact {
+        width: 100%;
+        max-width: 240px;
+    }
+
+    .testimonial__bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .testimonial__profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .testimonials__button {
+        justify-content: center;
+    }
+
+    .divider {
+        display: none;
     }
 
     .footer__links {
@@ -1355,21 +1428,9 @@ MOBILE RESPONSIVENESS ↓
         align-items: center;
     }
 
-    .nav__logo {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
     .nav__logo--text {
         font-size: 18px;
         white-space: nowrap;
-    }
-
-    .btn__menu {
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .btn__menu--svg {
@@ -1377,7 +1438,6 @@ MOBILE RESPONSIVENESS ↓
         height: 26px;
     }
 
-    /* your existing stuff */
     .features__item {
         width: 100%;
     }
@@ -1397,9 +1457,12 @@ MOBILE RESPONSIVENESS ↓
         position: static;
         width: 100%;
         height: 48px;
+        margin-left: 0;
     }
 
     .footer__column {
         width: 45%;
     }
+
 }
+
